@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin: 20px;
+        }
+        .dashed{
+            border: 3px dashed black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1. campos: nombre, apellido y edad
+        2. boton de enviar formulario - submit
+        3. mostrar datos en pantalla
+        4. tener boton que nos muestra los datos actuales del formulario
+        5. validar formulario
+    -->
+    <h1>Ejercicio de Formulario</h1>
+    <div class="box">
+        <form action="#" method="POST" id="formulario" onsubmit="return false;">
+            <p>Nombre</p>
+            <input type="text" id="nombre" name="nombre">
+            <div id="error_nombre"></div>
+            <p>Apellido</p>
+            <input type="text" id="apellido" name="apellido">
+            <div id="error_apellido"></div>
+            <p>Edad</p>
+            <input type="number" id="edad" name="edad">
+            <div id="error_edad"></div>
+            <hr />
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+    </div>
+    <div class="box dashed">
+        <h3>Informacion del usuario</h3>
+        <hr />
+        <p>
+            Nombre: <span id="nom"></span>
+        </p>
+        <p>
+            Apellido: <span id="ape"></span>
+        </p>
+        <p>
+            Edad: <span id="eda"></span>
+        </p>
+    </div>
+    <script type="text/javascript" src="js/31ejerciciodom.js"></script>
+</body>
+</html>
